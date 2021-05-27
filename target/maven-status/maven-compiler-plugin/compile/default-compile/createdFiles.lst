@@ -1,0 +1,5 @@
+br\edu\infnet\controller\AppController.class
+br\edu\infnet\model\negocio\Aluno.class
+br\edu\infnet\model\negocio\Aluno_.class
+br\edu\infnet\model\repository\AlunoRepository.class
+Conexao\Conexao.class
