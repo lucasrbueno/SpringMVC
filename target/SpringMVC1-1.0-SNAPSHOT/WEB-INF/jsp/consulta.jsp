@@ -10,6 +10,11 @@
     <body>
         <div class="container">
             <h1>Consulta de alunos</h1>
+            <form method="get" action="pesquisa">
+                <input type="text" name="palavra">
+                <input type="submit" value="Procurar">              
+            </form>
+            <h3><a href="cadastro">Novo Aluno</a></h3>
             <table class="table">
                 <thead>
                     <tr>
@@ -18,6 +23,9 @@
                         </th>
                         <th>
                             Telefone
+                        </th>
+                        <th>
+                            Ações
                         </th>
                     </tr>
                 </thead>
@@ -29,6 +37,10 @@
                             </td>
                             <td>
                                 ${atributo.telefone}
+                            </td>
+                            <td>
+                                <a href="alterar?id=${atributo.id}">Alterar</a>
+                                <a href="excluir?id=${atributo.id}">Excluir</a>
                             </td>
                         </tr>
                     </c:forEach>

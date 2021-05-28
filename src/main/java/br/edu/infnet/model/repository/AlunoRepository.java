@@ -55,8 +55,12 @@ public class AlunoRepository {
     
     public void alterar(Aluno aluno){
         EntityManager em = getEM();
-//        em.contains(aluno);
-        em.find(Aluno.class, aluno.getId());
+
+        if(em.find(Aluno.class, aluno.getId()) == null){
+            System.out.println("Erro: Não alterado");
+            return;
+        }
+        
         em.getTransaction().begin();
         em.merge(aluno);
         em.getTransaction().commit();
