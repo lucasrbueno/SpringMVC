@@ -59,8 +59,7 @@ public class AlunoRepository {
         if(em.find(Aluno.class, aluno.getId()) == null){
             System.out.println("Erro: Não alterado");
             return;
-        }
-        
+        }    
         em.getTransaction().begin();
         em.merge(aluno);
         em.getTransaction().commit();
